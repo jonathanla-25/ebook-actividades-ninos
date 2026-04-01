@@ -1,31 +1,46 @@
 body {
-    font-family: Arial;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    background: #f8f8f8;
-    text-align: center;
+    background: #f5f7ff;
 }
 
+/* HERO */
 .hero {
     background: linear-gradient(135deg, #ff7b54, #ffcc70);
     color: white;
-    padding: 50px 20px;
+    text-align: center;
+    padding: 60px 20px;
 }
 
-.zoom {
-    width: 250px;
-    animation: zoom 2s infinite alternate;
+.mockup {
+    width: 260px;
+    margin: 20px;
+    animation: float 3s infinite;
 }
 
-@keyframes zoom {
-    from { transform: scale(1); }
-    to { transform: scale(1.05); }
+@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);}
 }
 
-.precio {
-    font-size: 30px;
-    margin: 15px;
+/* PRECIO */
+.precio-box {
+    background: white;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 15px;
 }
 
+.precio-box span {
+    text-decoration: line-through;
+}
+
+.precio-box h2 {
+    color: red;
+}
+
+/* BOTONES */
 .btn {
     display: block;
     margin: 10px auto;
@@ -33,9 +48,14 @@ body {
     width: 260px;
     background: #ff3d3d;
     color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.whatsapp {
+    background: #25D366;
 }
 
 .pulse {
@@ -43,40 +63,66 @@ body {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
+    50% { transform: scale(1.05);}
 }
 
-.whatsapp {
-    background: #25D366;
-}
-
+/* SECCIONES */
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
+    text-align: center;
 }
 
-.grid {
+/* CARDS */
+.cards {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-}
-
-.bonus-box {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.cards {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+    gap: 15px;
 }
 
 .card {
     background: white;
-    padding: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* GALERÍA */
+.galeria img {
+    width: 140px;
+    margin: 10px;
     border-radius: 10px;
-    width: 200px;
+}
+
+/* BONUS */
+.bonus {
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: white;
+}
+
+.bonus-box {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* TESTIMONIOS */
+.whatsapp-box {
+    background: #e7ffdb;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 15px;
+    width: 250px;
+}
+
+/* SCROLL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
