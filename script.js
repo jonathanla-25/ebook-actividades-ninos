@@ -1,8 +1,7 @@
-window.addEventListener('scroll', () => {
-    document.querySelectorAll('.reveal').forEach(el => {
-        let top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 50) {
-            el.classList.add('active');
-        }
-    });
+// Scroll suave
+document.querySelectorAll('a[href="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    alert("Aquí conectas tu link de pago (Gumroad)");
+  });
 });
