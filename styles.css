@@ -1,128 +1,146 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background: #f5f7ff;
+    text-align: center;
+    background: #fdf6ff;
 }
 
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, #ff7b54, #ffcc70);
+    background: linear-gradient(135deg, #ffd6e0, #d6f5ff);
+    padding: 50px 20px;
+}
+
+.top {
+    background: #ff6b81;
     color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.mockup {
-    width: 260px;
-    margin: 20px;
-    animation: float 3s infinite;
-}
-
-@keyframes float {
-    0% {transform: translateY(0);}
-    50% {transform: translateY(-10px);}
-    100% {transform: translateY(0);}
-}
-
-/* PRECIO */
-.precio-box {
-    background: white;
+    padding: 8px;
+    border-radius: 20px;
     display: inline-block;
-    padding: 15px 30px;
-    border-radius: 15px;
+    font-size: 14px;
 }
 
-.precio-box span {
+/* PRECIOS */
+.tachado {
     text-decoration: line-through;
+    color: #999;
+    font-size: 26px;
 }
 
-.precio-box h2 {
-    color: red;
+.precio {
+    font-size: 40px;
+    color: #00b894;
+    margin: 10px 0;
 }
 
 /* BOTONES */
 .btn {
     display: block;
-    margin: 10px auto;
-    padding: 15px;
-    width: 260px;
-    background: #ff3d3d;
-    color: white;
-    border-radius: 12px;
+    margin: 15px auto;
+    padding: 18px;
+    width: 280px;
+    border-radius: 30px;
+    font-weight: 700;
     text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.principal {
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+    color: black;
+    animation: pulse 1.5s infinite;
 }
 
 .whatsapp {
     background: #25D366;
+    color: white;
 }
 
-.pulse {
-    animation: pulse 1.5s infinite;
+.grande {
+    background: #ff7675;
+    color: white;
 }
 
-@keyframes pulse {
-    50% { transform: scale(1.05);}
+/* PAGOS */
+.pagos {
+    font-size: 14px;
+    margin-top: 10px;
 }
 
-/* SECCIONES */
-section {
-    padding: 50px 20px;
-    text-align: center;
+/* CONTADOR */
+.contador-box {
+    margin-top: 20px;
 }
 
-/* CARDS */
-.cards {
+#contador {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* BARRA */
+.barra {
+    width: 80%;
+    height: 10px;
+    background: #ddd;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+.progreso {
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b81, #ffb6b9);
+    border-radius: 10px;
+    animation: mover 3s infinite alternate;
+}
+
+/* BENEFICIOS */
+.beneficios {
+    padding: 40px 20px;
+}
+
+.grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 15px;
+    gap: 10px;
 }
 
 .card {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-}
-
-/* GALERÍA */
-.galeria img {
-    width: 140px;
-    margin: 10px;
-    border-radius: 10px;
 }
 
 /* BONUS */
 .bonus {
-    background: linear-gradient(135deg, #6dd5ed, #2193b0);
-    color: white;
+    background: #dff9fb;
+    padding: 40px 20px;
 }
 
 .bonus-box {
     background: white;
-    color: black;
     padding: 20px;
     border-radius: 15px;
 }
 
-/* TESTIMONIOS */
-.whatsapp-box {
-    background: #e7ffdb;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 15px;
-    width: 250px;
+/* CTA */
+.cta {
+    background: #ffeaa7;
+    padding: 40px;
 }
 
-/* SCROLL ANIMATION */
-.reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: 0.6s;
+/* ANIMACIONES */
+@keyframes pulse {
+    50% { transform: scale(1.05); }
 }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+@keyframes mover {
+    from { width: 50%; }
+    to { width: 90%; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .precio { font-size: 32px; }
+    .btn { width: 90%; }
+    .grid { grid-template-columns: 1fr; }
 }
