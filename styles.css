@@ -1,146 +1,101 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    text-align: center;
-    background: #fdf6ff;
 }
 
-/* HERO */
+/* HERO FULL */
 .hero {
-    background: linear-gradient(135deg, #ffd6e0, #d6f5ff);
-    padding: 50px 20px;
+    height: 100vh;
+    background: url('img/imagen1.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
 }
 
-.top {
-    background: #ff6b81;
-    color: white;
-    padding: 8px;
-    border-radius: 20px;
-    display: inline-block;
-    font-size: 14px;
+/* CAPA BLUR + COLOR */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 230, 240, 0.35); /* pastel rosado */
 }
 
-/* PRECIOS */
-.tachado {
-    text-decoration: line-through;
-    color: #999;
-    font-size: 26px;
+/* TEXTO */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #2d3436;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 15px 0;
 }
 
 .precio {
     font-size: 40px;
     color: #00b894;
-    margin: 10px 0;
 }
 
-/* BOTONES */
+/* BOTÓN */
 .btn {
-    display: block;
-    margin: 15px auto;
-    padding: 18px;
-    width: 280px;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 35px;
     border-radius: 30px;
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
     font-weight: 700;
     text-decoration: none;
-}
-
-.principal {
-    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
     color: black;
-    animation: pulse 1.5s infinite;
+    transition: 0.3s;
 }
 
-.whatsapp {
-    background: #25D366;
-    color: white;
+.btn:hover {
+    transform: scale(1.05);
 }
 
-.grande {
-    background: #ff7675;
-    color: white;
+/* TRANSICIÓN SUAVE */
+.transicion {
+    height: 120px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), #fdfcff);
 }
 
-/* PAGOS */
-.pagos {
-    font-size: 14px;
-    margin-top: 10px;
+/* CONTENIDO */
+.contenido {
+    background: #fdfcff;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-/* CONTADOR */
-.contador-box {
-    margin-top: 20px;
+.img-main {
+    width: 90%;
+    max-width: 600px;
 }
 
-#contador {
-    font-size: 30px;
-    font-weight: bold;
+/* ANIMACIÓN SCROLL */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.6s;
 }
 
-/* BARRA */
-.barra {
-    width: 80%;
-    height: 10px;
-    background: #ddd;
-    margin: 10px auto;
-    border-radius: 10px;
-}
-
-.progreso {
-    width: 70%;
-    height: 100%;
-    background: linear-gradient(90deg, #ff6b81, #ffb6b9);
-    border-radius: 10px;
-    animation: mover 3s infinite alternate;
-}
-
-/* BENEFICIOS */
-.beneficios {
-    padding: 40px 20px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-}
-
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-/* BONUS */
-.bonus {
-    background: #dff9fb;
-    padding: 40px 20px;
-}
-
-.bonus-box {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-}
-
-/* CTA */
-.cta {
-    background: #ffeaa7;
-    padding: 40px;
-}
-
-/* ANIMACIONES */
-@keyframes pulse {
-    50% { transform: scale(1.05); }
-}
-
-@keyframes mover {
-    from { width: 50%; }
-    to { width: 90%; }
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
-    .precio { font-size: 32px; }
-    .btn { width: 90%; }
-    .grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 30px; }
+    .hero p { font-size: 16px; }
 }
