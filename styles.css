@@ -1,129 +1,90 @@
-:root{
-  /* 🎯 Paleta enfocada a niños (más llamativa y alegre) */
-  --bg:#0f172a;          
-  --bg2:#1e293b;         
-
-  --card:rgba(255,255,255,.08);
-  --stroke:rgba(255,255,255,.18);
-
-  --text:#ffffff;
-  --muted:#dbeafe;
-  --muter:#93c5fd;
-
-  /* COLORES MÁS VIVOS (clave para conversión) */
-  --a1:#facc15;   /* amarillo */
-  --a2:#22c55e;   /* verde */
-  --a3:#fb7185;   /* rosado */
-  --a4:#38bdf8;   /* celeste */
-
-  --shadow: 0 20px 80px rgba(0,0,0,.35);
-  --radius: 22px;
-}
-
 body{
-  background:
-    radial-gradient(900px 600px at 20% 10%, rgba(250,204,21,.25), transparent 60%),
-    radial-gradient(900px 600px at 80% 90%, rgba(56,189,248,.25), transparent 60%),
-    linear-gradient(180deg, var(--bg), var(--bg2));
+  margin:0;
+  font-family:'Plus Jakarta Sans', sans-serif;
+  background:#0f172a;
+  color:#fff;
 }
 
-/* ✨ MÁS BRILLO EN ELEMENTOS */
-.glow{
-  opacity:.5;
+/* NAV */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
 }
 
-/* 🎯 BOTONES MÁS VENDEDORES */
+nav a{
+  margin:0 10px;
+  color:#fff;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:50px;
+}
+
+.hero-text h1{
+  font-size:48px;
+}
+
+.hero-text span{
+  color:#facc15;
+}
+
+.hero-img img{
+  width:400px;
+}
+
+/* BOTONES */
 .btn{
-  font-size:15px;
-  letter-spacing:.3px;
-}
-
-.btn.primary{
-  background:linear-gradient(135deg, var(--a1), var(--a3), var(--a4));
-  box-shadow:0 12px 40px rgba(251,113,133,.45);
-}
-
-.btn.primary:hover{
-  transform:translateY(-3px) scale(1.03);
-}
-
-/* 💥 TITULAR MÁS IMPACTANTE */
-.headline{
-  font-size:54px;
-  line-height:1.05;
-}
-
-/* ✨ TEXTO GRADIENTE MÁS LLAMATIVO */
-.grad{
-  background:linear-gradient(90deg, #facc15, #fb7185, #38bdf8, #22c55e);
-  -webkit-background-clip:text;
-  color:transparent;
-}
-
-/* 🎯 CHIPS MÁS ATRACTIVOS */
-.chip{
-  background:linear-gradient(135deg, rgba(255,255,255,.15), rgba(255,255,255,.05));
-  border:1px solid rgba(255,255,255,.25);
+  background:#22c55e;
+  padding:12px 18px;
+  border-radius:10px;
   color:#fff;
+  text-decoration:none;
+  display:inline-block;
+  margin-top:10px;
 }
 
-/* 🧸 TARJETAS MÁS DIVERTIDAS */
+.btn.ghost{
+  background:transparent;
+  border:1px solid #fff;
+}
+
+.btn.small{
+  padding:8px 12px;
+}
+
+/* SECCIONES */
+.section{
+  padding:50px;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:20px;
+}
+
 .card{
-  background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-  border:1px solid rgba(255,255,255,.18);
-  transition:.25s ease;
+  background:#1e293b;
+  padding:20px;
+  border-radius:12px;
 }
 
-.card:hover{
-  transform:translateY(-6px) scale(1.02);
-}
-
-/* 🌈 ICONOS MÁS VIVOS */
-.cardIcon{
-  background:linear-gradient(135deg, var(--a1), var(--a3), var(--a4));
-  color:#111;
-}
-
-/* 🎯 CTA MÁS FUERTE */
-.ctaBar{
-  background:linear-gradient(135deg, rgba(250,204,21,.35), rgba(56,189,248,.25), rgba(251,113,133,.25));
-}
-
-/* 🖼️ IMÁGENES MÁS LLAMATIVAS */
-.heroImageCard img{
-  filter:saturate(1.2) contrast(1.1) brightness(1.05);
-}
-
-/* 🎯 BADGES MÁS VISIBLES */
-.badge{
-  background:linear-gradient(135deg, var(--a4), var(--a3));
-  color:#fff;
+/* CONTACTO */
+.contacto input{
+  padding:10px;
+  border-radius:8px;
   border:none;
 }
 
-/* 💥 GALERÍA MÁS ATRACTIVA */
-.work:hover{
-  transform:translateY(-6px) scale(1.02);
-}
-
-/* 🎯 BOTONES DE FILTRO */
-.fBtn.active{
-  background:linear-gradient(135deg, var(--a1), var(--a3), var(--a4));
-  color:#111;
-}
-
-/* 🧠 FORMULARIO MÁS CLARO */
-input,select,textarea{
-  background:rgba(255,255,255,.08);
-}
-
-/* 📲 WHATSAPP MÁS LLAMATIVO */
-.waFloat{
-  background:linear-gradient(135deg, #22c55e, #4ade80);
-  color:#fff;
-  font-size:15px;
-}
-
-.waPulse{
-  background:rgba(34,197,94,.35);
+footer{
+  text-align:center;
+  padding:20px;
 }
