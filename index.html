@@ -3,287 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ebooks educativos para niños | Aprende jugando</title>
-  <meta name="description" content="Ebooks educativos para niños que mejoran la lectura, escritura y creatividad de forma divertida." />
-  <meta name="theme-color" content="#17110f" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Ebooks educativos para niños</title>
+  <meta name="description" content="Ebooks educativos con actividades divertidas para niños. Mejora lectura, escritura y creatividad jugando." />
+
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- Background FX (NO SE TOCA) -->
-  <div class="bg" aria-hidden="true">
-    <div class="noise"></div>
-    <div class="paper"></div>
-    <div class="glow g1"></div>
-    <div class="glow g2"></div>
-    <div class="glow g3"></div>
-    <div class="grainSweep"></div>
-    <div class="cursorBlob" id="cursorBlob"></div>
+<header class="topbar">
+  <div class="logo">📚 Ebooks</div>
+  <nav>
+    <a href="#beneficios">Beneficios</a>
+    <a href="#contenido">Contenido</a>
+    <a href="#contacto" class="btn small">Comprar</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>
+      Material didáctico <span>divertido</span><br>
+      para que tus hijos aprendan jugando
+    </h1>
+
+    <p>
+      Más de 50 actividades prácticas para mejorar lectura, escritura y creatividad.
+    </p>
+
+    <div class="cta">
+      <a href="#contacto" class="btn">Comprar ahora</a>
+      <a href="#beneficios" class="btn ghost">Ver beneficios</a>
+    </div>
+
+    <div class="stats">
+      <span>+50 actividades</span>
+      <span>100% práctico</span>
+      <span>Descarga inmediata</span>
+    </div>
   </div>
 
-  <!-- TOPBAR -->
-  <header class="topbar">
-    <a class="brand" href="#home">
-      <span class="brandMark">📘</span>
-      <span class="brandText">Ebooks Educativos</span>
-    </a>
-
-    <nav class="nav">
-      <a href="#servicios">Beneficios</a>
-      <a href="#portafolio">Contenido</a>
-      <a href="#metodo">Cómo funciona</a>
-      <a href="#contacto" class="pill">Comprar</a>
-    </nav>
-
-    <button class="burger" id="burger">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <!-- MOBILE MENU -->
-  <div class="mobileMenu" id="mobileMenu">
-    <a href="#servicios" class="mLink">Beneficios</a>
-    <a href="#portafolio" class="mLink">Contenido</a>
-    <a href="#metodo" class="mLink">Cómo funciona</a>
-    <a href="#contacto" class="mLink mCta">Comprar</a>
+  <div class="hero-img">
+    <img src="img/hero.png" alt="ebook niños">
   </div>
+</section>
 
-  <main id="home">
+<section id="beneficios" class="section">
+  <h2>Beneficios para tu hijo</h2>
 
-    <!-- HERO -->
-    <section class="hero section">
-      <div class="heroInner">
+  <div class="cards">
+    <div class="card">📖 Mejora la lectura</div>
+    <div class="card">✏️ Refuerza escritura</div>
+    <div class="card">🎨 Desarrolla creatividad</div>
+  </div>
+</section>
 
-        <div class="heroCopy reveal">
-          <div class="chips">
-            <span class="chip">Lectura</span>
-            <span class="chip">Escritura</span>
-            <span class="chip">Creatividad</span>
-            <span class="chip">Aprendizaje divertido</span>
-          </div>
+<section id="contenido" class="section">
+  <h2>¿Qué incluye?</h2>
 
-          <h1 class="headline">
-            Material didáctico <span class="grad">divertido</span>,
-            que tus hijos <span class="shine">disfrutan</span> mientras aprenden
-          </h1>
+  <div class="cards">
+    <div class="card">🧠 Ejercicios prácticos</div>
+    <div class="card">🎮 Actividades divertidas</div>
+    <div class="card">🖨️ Listo para imprimir</div>
+  </div>
+</section>
 
-          <p class="sub">
-            Ebooks diseñados especialmente para niños que fortalecen la 
-            <strong>lectura, escritura y creatividad</strong> mediante actividades prácticas, juegos y ejercicios.
-          </p>
+<section id="contacto" class="section contacto">
+  <h2>Obtén el ebook ahora</h2>
 
-          <div class="heroCtas">
-            <a class="btn primary" href="#contacto">
-              Comprar ahora
-            </a>
+  <form id="form">
+    <input type="text" placeholder="Tu nombre" required>
+    <button type="submit" class="btn">Comprar por WhatsApp</button>
+  </form>
+</section>
 
-            <a class="btn ghost" href="#servicios">
-              Ver beneficios
-            </a>
-          </div>
+<footer>
+  © <span id="year"></span> Ebooks educativos
+</footer>
 
-          <div class="heroStats">
-            <div class="stat">
-              <div class="statNum">+50</div>
-              <div class="statTxt">actividades</div>
-            </div>
-            <div class="stat">
-              <div class="statNum">100%</div>
-              <div class="statTxt">práctico</div>
-            </div>
-            <div class="stat">
-              <div class="statNum">PDF</div>
-              <div class="statTxt">descarga inmediata</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="heroVisual reveal">
-          <div class="heroImageCard">
-            <img src="./img/ebook.png" alt="Ebook educativo para niños" />
-            <div class="heroImageOverlay">
-              <div class="badgeRow">
-                <span class="badge">Actividades</span>
-                <span class="badge">Aprendizaje</span>
-                <span class="badge">Diversión</span>
-              </div>
-              <div class="heroImageTitle">Aprender jugando</div>
-              <div class="heroImageSub">Ideal para niños en casa</div>
-            </div>
-          </div>
-
-          <div class="toolRow">
-            <span class="toolPill">Lectura</span>
-            <span class="toolPill">Escritura</span>
-            <span class="toolPill">Lógica</span>
-            <span class="toolPill">Creatividad</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- BENEFICIOS -->
-    <section id="servicios" class="section">
-      <div class="wrap">
-
-        <div class="sectionHead reveal">
-          <h2>Beneficios para tus hijos</h2>
-          <p>
-            Más que entretenimiento, es aprendizaje real mientras se divierten.
-          </p>
-        </div>
-
-        <div class="cards">
-
-          <article class="card reveal">
-            <div class="cardIcon">📖</div>
-            <h3>Mejora la lectura</h3>
-            <p>Ejercicios diseñados para fortalecer comprensión lectora de forma progresiva.</p>
-          </article>
-
-          <article class="card reveal">
-            <div class="cardIcon">✏️</div>
-            <h3>Estimula la escritura</h3>
-            <p>Actividades prácticas que ayudan a desarrollar habilidades de escritura.</p>
-          </article>
-
-          <article class="card reveal">
-            <div class="cardIcon">🧠</div>
-            <h3>Desarrolla creatividad</h3>
-            <p>Juegos y retos que estimulan el pensamiento creativo.</p>
-          </article>
-
-        </div>
-
-        <div class="ctaBar reveal">
-          <div>
-            <h3>Convierte el aprendizaje en algo divertido</h3>
-            <p>Perfecto para estudiar desde casa sin aburrimiento.</p>
-          </div>
-          <a class="btn primary" href="#contacto">Comprar ahora</a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTENIDO -->
-    <section id="portafolio" class="section">
-      <div class="wrap">
-
-        <div class="sectionHead reveal">
-          <h2>¿Qué incluye el ebook?</h2>
-          <p>Ejemplos reales de actividades dentro del material.</p>
-        </div>
-
-        <div class="gallery">
-
-          <article class="work reveal">
-            <div class="workThumb img">
-              <img src="./img/1.png" alt="">
-            </div>
-            <div class="workInfo">
-              <h3>Ejercicios de lectura</h3>
-              <p>Comprensión y análisis.</p>
-            </div>
-          </article>
-
-          <article class="work reveal">
-            <div class="workThumb img">
-              <img src="./img/2.png" alt="">
-            </div>
-            <div class="workInfo">
-              <h3>Actividades de escritura</h3>
-              <p>Aprender escribiendo.</p>
-            </div>
-          </article>
-
-          <article class="work reveal">
-            <div class="workThumb img">
-              <img src="./img/3.png" alt="">
-            </div>
-            <div class="workInfo">
-              <h3>Juegos educativos</h3>
-              <p>Diversión con aprendizaje.</p>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CÓMO FUNCIONA -->
-    <section id="metodo" class="section">
-      <div class="wrap">
-
-        <div class="sectionHead reveal">
-          <h2>¿Cómo funciona?</h2>
-        </div>
-
-        <div class="steps">
-
-          <div class="step reveal">
-            <div class="stepNum">01</div>
-            <h3>Compra</h3>
-            <p>Realizas el pago de forma segura.</p>
-          </div>
-
-          <div class="step reveal">
-            <div class="stepNum">02</div>
-            <h3>Descarga</h3>
-            <p>Recibes el ebook inmediatamente.</p>
-          </div>
-
-          <div class="step reveal">
-            <div class="stepNum">03</div>
-            <h3>Imprime o usa digital</h3>
-            <p>Puedes usarlo en casa fácilmente.</p>
-          </div>
-
-          <div class="step reveal">
-            <div class="stepNum">04</div>
-            <h3>Aprende jugando</h3>
-            <p>Tu hijo mejora mientras se divierte.</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- COMPRA -->
-    <section id="contacto" class="section">
-      <div class="wrap">
-
-        <div class="contactBox reveal">
-          <div class="contactCopy">
-            <h2>Obtén el ebook ahora</h2>
-            <p>
-              Accede de inmediato al material y empieza hoy mismo.
-            </p>
-
-            <div class="contactBtns">
-              <a class="btn primary" target="_blank"
-                 href="https://wa.me/593XXXXXXXX?text=Hola,%20quiero%20comprar%20el%20ebook">
-                Comprar por WhatsApp
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
